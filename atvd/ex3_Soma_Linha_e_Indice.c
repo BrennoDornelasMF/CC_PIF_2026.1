@@ -34,8 +34,6 @@ int main(void) {
 
     }
     
-    
-
 
     for(i=0; i < R; i++){
         printf("%d ", soma[i]);
