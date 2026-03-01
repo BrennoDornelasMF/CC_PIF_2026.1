@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int linhasCrescentes(int N, int M[][N]);
+int linhasCrescentes(int N, int M[N][N]);
 
 int main(){
    
@@ -13,12 +13,14 @@ int main(){
     int N = 3;
  
 
-    linhasCrescentes(N, mat);
+    int resultado = linhasCrescentes(N, mat);
+
+    printf("%d", resultado);
 
     return 0;
 }
 
-int linhasCrescentes(int N, int M[][N]){
+int linhasCrescentes(int N, int M[N][N]){
 
     int i,j;
     for(i = 0;i < N; i++){
