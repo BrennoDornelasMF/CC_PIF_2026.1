@@ -15,13 +15,12 @@ int main(){
 
 int matrizIndentidade(int M[][3]){
     int i,j;
-    int diagonalP = 0;
     int cont = 0;
 
     for (i = 0; i < 3; i++){
         for (j = 0; j < 3; j++){
             if(i == j && M[i][j] == 1){
-                diagonalP++;
+                cont++;
             }else if(M[i][j] == 0){
                 cont++;
             }else{
@@ -32,7 +31,7 @@ int matrizIndentidade(int M[][3]){
         }
     }
 
-    if(diagonalP == 3 && cont == 6){
+    if(cont == 9){
         return 1;
     }
 
