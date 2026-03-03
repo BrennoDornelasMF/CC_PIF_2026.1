@@ -21,7 +21,7 @@ int somaDiagonalSuperior(int N, int M[N][N]){
     for(i = 0; i < N; i++){
         for(j = 0; j < N; j++){
 
-            if(i + j == N - 1){
+            if(j > i){
                 soma += M[i][j];
             }
         }
