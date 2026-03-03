@@ -26,13 +26,12 @@ int menorSomaPonderada(int N, double M[][N], double P[]) {
     
     int indiceMenor = 0;
     double menorSoma = 0.0;
-
-    // Calcula a soma da coluna 0 para inicializar
+   
     for (i = 0; i < N; i++) {
         menorSoma += M[i][0] * P[i];
     }
 
-    // Percorre as demais colunas
+
     for (j = 1; j < N; j++) {
         double soma = 0.0;
 
@@ -40,7 +39,7 @@ int menorSomaPonderada(int N, double M[][N], double P[]) {
             soma += M[i][j] * P[i];
         }
 
-        if (soma < menorSoma) {   // comparação estrita para respeitar empate
+        if (soma < menorSoma) {   
             menorSoma = soma;
             indiceMenor = j;
         }
