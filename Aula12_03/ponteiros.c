@@ -30,5 +30,6 @@ int main (){
         int V[5] = {1,2,3,4,5};
         int m = 5;
 
-        imprime(&V,&m);
+        imprime(V ,&m);
+        //printf("%d" , *N);
     }
