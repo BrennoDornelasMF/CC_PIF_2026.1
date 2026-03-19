@@ -44,4 +44,6 @@ void tranpor3x3(int (*m)[3]){
          printf("%d ", *(*(m + i) + j));
         }
     }
+
+   
 }
