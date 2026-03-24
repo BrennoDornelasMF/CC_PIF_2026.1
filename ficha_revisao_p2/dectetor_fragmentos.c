@@ -20,7 +20,7 @@ int main(){
 }
 
 int subString(char *str, char *subString){
-/*
+
     size_t tam_subString = strlen(subString);
 
     while (*str != '\0')
@@ -42,8 +42,8 @@ int subString(char *str, char *subString){
         str++;
     }
     return 0;
-*/
 
+/*
     if (strstr(str,subString) != NULL)
     {
         return 1;
@@ -51,7 +51,7 @@ int subString(char *str, char *subString){
     {
         return 0;
     }
-    
+*/
 
     
 
