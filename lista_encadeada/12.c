@@ -8,7 +8,8 @@ typedef struct node{
 
 void adicionar_inicio(node **head, int valor);
 void listar(node *head);
-void inverte_lista(node **head);
+node* remove_head(node **head, int pos);
+
 
 int main (){
 
@@ -21,10 +22,12 @@ int main (){
     adicionar_inicio(&head, 50);
 
     listar(head);
-    inverte_lista(&head);
+    printf("\n");
+    node* pos = remove_head(&head,2);
+    printf("%p", &pos);
     printf("\n");
 
-    listar(head);
+    // listar(head);
 }
 
 void adicionar_inicio(node **head, int valor){
@@ -48,22 +51,22 @@ void listar(node *head){
     
 }
 
-void inverte_lista(node **head){
+node* remove_head(node **head, int pos){
 
-    node *proximo = NULL;
-    node *atual = *head;
-    node *anterior = NULL;
-
-    
-    
-    while (atual != NULL)
-    {
-        proximo = atual->next;
-        
-        atual->next = anterior;
-        anterior = atual;
-        atual = proximo;
+    if(head ==NULL){
+        return NULL;
     }
-    *head = anterior;
+
+    node *temp = NULL;
+    node *aux  = head;
+    int i = 0;
+
+    while (i != 0)
+    {
+        temp = aux;
+        aux = aux->next;
+        free(temp);
+    }
+    return aux;
     
 }
